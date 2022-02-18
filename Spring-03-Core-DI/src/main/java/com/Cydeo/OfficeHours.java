@@ -1,2 +1,11 @@
-package com.Cydeo;public class OfficeHours {
+package com.Cydeo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class OfficeHours {
+
+    public int getHours(){
+        return 5;
+    }
 }
