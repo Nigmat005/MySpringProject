@@ -1,4 +1,4 @@
-package com.cydeo.StudentTaksController;
+package com.cydeo.controller;
 
 import com.cydeo.model.Gender;
 import com.cydeo.model.StudentTask;
@@ -11,8 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 
 @Controller
+@RequestMapping("/task")
 public class taskController {
-    @RequestMapping("/StudentInfoTable")
+    @RequestMapping("/StudentInfoTable")  //localhost:8080/task/StudentInfoTable
     public String task(Model model){
         List<StudentTask> list=new ArrayList<>();
         StudentTask task1= new StudentTask("Mickael","Smith",25, Gender.MALE);
