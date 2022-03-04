@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Student Info Is Shown Below </h1>
+   <table>
+     <tbody>
+        <tr>
+            <th> FirstName </th>
+            <th> LastName </th>
+            <th> Age </th>
+            <th> Gender </th>
+        </tr>
+        <tr>
+            <td th:text="${row1.getFirstName()}" ></td>
+            <td th:text="${row1.getLastName()}"></td>
+            <td th:text="${row1.getAge()}"></td>
+            <td th:text="${row1.getGender()}"></td>
+        </tr>
+
+        <tr>
+            <td th:text="${row2.getFirstName()}" ></td>
+            <td th:text="${row2.getLastName()}"></td>
+            <td th:text="${row2.getAge()}"></td>
+            <td th:text="${row2.getGender()}"></td>
+        </tr>
+        <tr>
+            <td th:text="${row3.getFirstName()}" ></td>
+            <td th:text="${row3.getLastName()}"></td>
+            <td th:text="${row3.getAge()}"></td>
+            <td th:text="${row3.getGender()}"></td>
+        </tr>
+
+     </tbody>
+   </table>
+</body>
+</html>
