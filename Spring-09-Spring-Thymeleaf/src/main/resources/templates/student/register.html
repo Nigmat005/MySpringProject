@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{index.page.title}">Hahaha</title>
+</head>
+<body>
+
+<h2>Welcome New Student</h2>
+
+<!--Displaying Value-->
+
+<h2 th:text="${students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).lastName}"></h2>
+
+<!--Link-->
+
+<a th:href="@{https://cydeo.com}">Cydeo Home Page</a>
+
+<a th:href="@{/student/welcome}">Link1</a>
+
+
+<!--Conditional Logic-->
+
+<div th:text="${students.get(0).age > 25 ? 'ELIGIABLE' : 'NOT ELEGIABLE'}"></div>
+
+<div>
+    <span th:if="${students.get(0).getState()=='Arizona'}"> Arizona </span>
+    <span th:unless="${students.get(0)=='Arizona'}">Not Arizona</span>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

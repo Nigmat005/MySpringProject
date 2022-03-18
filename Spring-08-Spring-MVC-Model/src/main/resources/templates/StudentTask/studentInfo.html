@@ -16,25 +16,36 @@
         <th> Gender</th>
     </tr>
     </thead>
-    <tr>
-        <td th:text="${StudentList.get(0).getFirstName()}"></td>
-        <td th:text="${StudentList.get(0).getLastName()}"></td>
-        <td th:text="${StudentList.get(0).age}"></td>
-        <td th:text="${StudentList.get(0).gender}"></td>
-    </tr>
+<!--    <tr>-->
+<!--        <td th:text="${StudentList.get(0).getFirstName()}"></td>-->
+<!--        <td th:text="${StudentList.get(0).getLastName()}"></td>-->
+<!--        <td th:text="${StudentList.get(0).age}"></td>-->
+<!--        <td th:text="${StudentList.get(0).gender}"></td>-->
+<!--    </tr>-->
 
-    <tr>
-        <td th:text="${StudentList.get(1).getFirstName()}"></td>
-        <td th:text="${StudentList.get(1).getLastName()}"></td>
-        <td th:text="${StudentList.get(1).age}"></td>
-        <td th:text="${StudentList.get(1).gender}"></td>
-    </tr>
-    <tr>
-        <td th:text="${StudentList.get(2).getFirstName()}"></td>
-        <td th:text="${StudentList.get(2).getLastName()}"></td>
-        <td th:text="${StudentList.get(2).age}"></td>
-        <td th:text="${StudentList.get(2).gender}"></td>
-    </tr>
+    <ul>
+        <li th:each="students:${StudentList}" th:text="${students.getLastName()}" ></li>
+
+    </ul>
+<tr th:each="eachStudent : ${StudentList}">
+    <td th:text="${eachStudent.getFirstName()}"></td>
+    <td th:text="${eachStudent.getLastName()}"></td>
+    <td th:text="${eachStudent.getAge()}"></td>
+    <td th:text="${eachStudent.getGender()}"></td>
+</tr>
+
+<!--    <tr>-->
+<!--        <td th:text="${StudentList.get(1).getFirstName()}"></td>-->
+<!--        <td th:text="${StudentList.get(1).getLastName()}"></td>-->
+<!--        <td th:text="${StudentList.get(1).age}"></td>-->
+<!--        <td th:text="${StudentList.get(1).gender}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td th:text="${StudentList.get(2).getFirstName()}"></td>-->
+<!--        <td th:text="${StudentList.get(2).getLastName()}"></td>-->
+<!--        <td th:text="${StudentList.get(2).age}"></td>-->
+<!--        <td th:text="${StudentList.get(2).gender}"></td>-->
+<!--    </tr>-->
 
     </tbody>
 </table>
